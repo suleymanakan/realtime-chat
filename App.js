@@ -28,18 +28,16 @@ import ChatList from './src/pages/ChatList';
 
 const App: () => React$Node = () => {
   return (
- 
-     
-      <SafeAreaView>
+
        <Router>
-         <Stack key="root">
-           <Scene key="login" component={Login}  initial/>
-           <Scene key="logout" component={ChatList} />
-         </Stack>
+         <Scene key="root">
+           <Scene key="login" component={Login} title="Login"  />
+           <Scene key="chatlist" component={ChatList} hideNavBar initial  />
+         </Scene>
        </Router>
-       <Text>asdfsdfasdfas</Text>
-       <Login />
-      </SafeAreaView>
+      
+      
+     
   
   );
 };
